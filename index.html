@@ -140,12 +140,17 @@
         }
 
         .prize-icon {
-            font-size: 48px;
+            font-size: 42px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .prize-title {
             font-size: 32px;
             color: #333;
+            font-weight: 500;
         }
 
         .prize-subtitle {
@@ -232,6 +237,15 @@
             transform: translateY(-2px);
         }
 
+        .expand-btn .arrow {
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .expand-btn:hover .arrow {
+            transform: translateY(2px);
+        }
+
         .secondary-card {
             border: 3px solid #1e5bb8;
             border-radius: 20px;
@@ -251,18 +265,27 @@
 
         .secondary-icon {
             font-size: 32px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .badge-new {
             background: linear-gradient(135deg, #ff0033 0%, #ff4466 100%);
             color: white;
-            padding: 5px 15px;
+            padding: 6px 16px;
             border-radius: 20px;
             font-size: 14px;
             font-weight: bold;
             display: inline-flex;
             align-items: center;
-            gap: 3px;
+            gap: 4px;
+            box-shadow: 0 2px 8px rgba(255, 0, 51, 0.3);
+        }
+
+        .badge-new .star {
+            font-size: 16px;
         }
 
         .secondary-title {
@@ -326,6 +349,11 @@
 
         /* Responsive Design */
         @media (max-width: 600px) {
+            .logo {
+                width: 70px;
+                height: 70px;
+            }
+
             .header-text h1 {
                 font-size: 28px;
             }
@@ -334,9 +362,25 @@
                 font-size: 16px;
             }
 
+            .title {
+                font-size: 24px;
+            }
+
             .date-selector {
                 font-size: 22px;
                 padding: 15px 20px;
+            }
+
+            .card-title {
+                font-size: 28px;
+            }
+
+            .prize-icon {
+                font-size: 36px;
+            }
+
+            .prize-title {
+                font-size: 26px;
             }
 
             .grand-prize {
@@ -393,7 +437,7 @@
             <div class="card-title">สลากกินแบ่งรัฐบาล</div>
             
             <div class="prize-header">
-                <div class="prize-icon"></div>
+                <div class="prize-icon">🎫</div>
                 <div class="prize-title">สลากหกหลัก</div>
             </div>
 
@@ -431,15 +475,18 @@
             </div>
 
             <button class="expand-btn">
-                ตรวจสลากฯ งวดนี้เพิ่มเติม
-                <span>▼</span>
+                <span>ตรวจสลากฯ งวดนี้เพิ่มเติม</span>
+                <span class="arrow">▼</span>
             </button>
 
             <div class="secondary-card">
                 <div class="secondary-header">
-                    <span class="secondary-icon">️</span>
+                    <span class="secondary-icon">🎟️</span>
                     <span class="secondary-title">สลากตัวเลขสามหลัก</span>
-                    <span class="badge-new">★ New</span>
+                    <span class="badge-new">
+                        <span class="star">★</span>
+                        <span>New</span>
+                    </span>
                 </div>
 
                 <div class="secondary-subtitle">รางวัลสามตรง</div>
@@ -466,5 +513,3 @@
 </body>
 </html>
 ```
-
-
